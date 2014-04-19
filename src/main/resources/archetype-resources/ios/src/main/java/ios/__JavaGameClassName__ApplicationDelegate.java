@@ -5,8 +5,8 @@ package ${package}.ios;
 
 import ${package}.core.${JavaGameClassName};
 
-import org.robovm.cocoatouch.foundation.NSAutoreleasePool;
-import org.robovm.cocoatouch.uikit.UIApplication;
+import org.robovm.apple.foundation.NSAutoreleasePool;
+import org.robovm.apple.uikit.UIApplication;
 
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
@@ -23,6 +23,6 @@ public class ${JavaGameClassName}ApplicationDelegate extends IOSApplication.Dele
     public static void main(String[] argv) {
         NSAutoreleasePool pool = new NSAutoreleasePool();
         UIApplication.main(argv, null, ${JavaGameClassName}ApplicationDelegate.class);
-        pool.drain();
+        pool.close();
     }
 }
